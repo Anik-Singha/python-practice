@@ -24,7 +24,7 @@
 # price = "$1,299.99"
 # print(price.replace('$', '').replace(',',''))   # example case 2
 #
-# # TODO : cleaning using replace()
+# #  cleaning using replace()
 # phone1 = "+49 (176) 123-4567"
 # print(phone1.replace('+', '00').replace(' ', '').replace('(', '').replace(')', '').replace('-', ''))
 #
