@@ -100,3 +100,12 @@ print(phone2[phone2.find("-") + 1:])  # ➜ 654-16548
 print(phone3[phone3.find("-") + 1:])  # ➜ 654-16548
 
 print(phone1.find("-"))              # ➜ 3
+
+# ? VALIDATION
+country = "India"
+print(country.isalpha())    # isalpha() checks if the string has only alphabets
+country1 = "India1"
+print(country1.isalpha())   # out : false
+
+phoneno = "8132800834"
+print(phoneno.isnumeric())  # isnumeric() to check numbers , it will not accept float too, result false
