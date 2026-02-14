@@ -59,10 +59,18 @@ print(s1[::2])
 # * 6.Swap First & Last
 arr = [1, 2, 3, 4, 5]
 # Write code to swap first and last element using indexing
+x = arr[0]
+arr[0] = arr[-1]
+arr[-1] = x             # ? simpler : arr[0], arr[-1] = arr[-1], arr[0]
+print(arr)
 
 # * 7.Extract Domain
 email = "anik.singha@gmail.com"
 # extract "gmail" and "com" using indexing and slicing only (no split)
+#gmail
+start = email.index("@")+1
+dot =  email.index(".",start)   # start is used to clarify where to start as index start from 1st
+print(email[start:dot])
 
 # * 8.Flatten Specific Elements
 data = [
@@ -71,11 +79,14 @@ data = [
     ["C", 30]
 ]
 # Using indexing, create: ["A", "B", "C"]
+print([data[0][0],data[1][0],data[2][0]])
 
 # * 9.Reverse Words Using Slicing
 s = "I love Python"
 #Reverse the entire string using slicing.
+print(s[::-1])
 # Then reverse only "Python" using indexing.
+print(s[s.find("Python"):][::-1])
 
 # ! HARD
 # ! ======================================

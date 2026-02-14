@@ -100,6 +100,8 @@ print(phone2[phone2.find("-") + 1:])  # ➜ 654-16548
 print(phone3[phone3.find("-") + 1:])  # ➜ 654-16548
 
 print(phone1.find("-"))              # ➜ 3
+                                     # ? we can use words inside find e.g.'python' and it will find the first index of
+                                     #   similar word
 
 # ? VALIDATION
 country = "India"
