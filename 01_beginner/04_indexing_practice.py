@@ -14,15 +14,25 @@ print(s[::-1])
 # * 2.List Indexing
 nums = [10, 20, 30, 40, 50]
 # Print the second element
+print(nums[1])
 # Print the last two elements
+print(nums[-2:])
 # Replace 30 with 300 using indexing
+nums1 = nums
+nums1[2] = 300
+print(nums1)
 # Print elements at even index positions
+print(nums[::2])
 
 # * 3.Negative Indexing
 text = "Python"
 # Print the last character using negative index
+print(text[-1])
 # Print "tho" using slicing
+print(text[2:5])
 # Remove the last character using slicing
+text = text[:5]     # ? or better text[:-1]
+print(text)
 
 # * 4.Nested List Indexing
 matrix = [
@@ -31,9 +41,13 @@ matrix = [
     [7, 8, 9]
 ]
 # Print 5
+print(matrix[1][1])
 # Print 9
+print(matrix[2][2])
 # Print [4, 5, 6]
+print(matrix[1])
 # Print [2, 5, 8] (middle column)
+print([matrix[0][1],matrix[1][1],matrix[2][1]])
 
 # ! MEDIUM
 # ! ==============================
