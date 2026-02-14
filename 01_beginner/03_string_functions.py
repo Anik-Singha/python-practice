@@ -51,7 +51,7 @@
 #     # This splits the contents of the file by commas
 #     print(data.split(","))
 
-# * operator // 'string' * number - repeats multiple times
+# ?  * operator // 'string' * number - repeats multiple times
 print("ha" * 3)
 
 # INDEXING AND SLICING / start position is included but end is not
@@ -62,3 +62,41 @@ print(text[0:5:2])  # out : Pto
 print(text[0:5:1]) # out : Pytho / steps of 1 take every letter
 print(text[::3])    # out : Ph / start from P and jump 3 steps
 print(text[::-1])   # out : nohtyP / reverses the string
+
+# ? Whitespace Cleanup
+text = " Engineering".lstrip()  # remove space from left
+print(text)
+text = "Engineering ".rstrip()  # remove space from right
+print(text)
+text = " Engineering ".strip()  # remove spaces from both sides
+print(text)                     # * strip() will not remove space in between words e.g 'data engineer'
+
+text = '###abc###'.strip("#")
+print(text)                     # * we can pass the desired characters we want to remove
+
+# ? CASE CONVERSIONS // upper(), lower()
+text = 'python PROGRAMMING'
+print(text.upper())
+print(text.lower())
+
+# ? SEARCH
+phone = '+91-8132-800-326'
+print(phone.startswith('+91'))  # startswith() to check from start
+
+email = "anik@gmail.com"
+print(email.endswith('@gmail.com')) #endswith() to check from end
+
+print("@" in email) # in to check in the middle
+
+# ---------------------------------------
+# Partial Extraction Using find()
+# ---------------------------------------
+phone1 = "+48-176-12345"
+phone2 = "48-654-16548"
+phone3 = "0048-654-16548"
+
+print(phone1[phone1.find("-") + 1:])  # ➜ 176-12345
+print(phone2[phone2.find("-") + 1:])  # ➜ 654-16548
+print(phone3[phone3.find("-") + 1:])  # ➜ 654-16548
+
+print(phone1.find("-"))              # ➜ 3
