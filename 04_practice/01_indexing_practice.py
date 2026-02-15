@@ -97,15 +97,20 @@ matrix = [
     [31, 32, 33]
 ]
 # Extract primary diagonal [11, 22, 33],
+print([matrix[i][i] for i in range(3)])
+
 # extract secondary diagonal [13, 22, 31] using indexing  only
+print([matrix[i][2-i] for i in range(3)])
 
 # * 11.Custom Slice Logic
 s = "DataEngineer"
 # create Dtanier using slicing logic only (no loops)
+print(s[0] + s[2:4] + s[5::2])
 
 # * 12. Rotate List
 nums = [1, 2, 3, 4, 5, 6]
 # output : [5, 6, 1, 2, 3, 4] using slicing only
+print(nums[-2:] + nums[:-2])
 
 # * 13.Multi-Level Index Challenge
 data = [
@@ -115,9 +120,13 @@ data = [
 ]
 #Extract:
 # 5
+print(data[1][1][1])
 # 9
+print(data[2][1][2])
 # [4, 5, 6]
+print(data[1][1])
 # [2, 5, 8] (middle elements of each inner list)
+print([data[i][1][1] for i in range(3)])
 
 # * 14. Sliding Window
 nums = [1,2,3,4,5,6]
@@ -127,3 +136,5 @@ nums = [1,2,3,4,5,6]
      [3,4,5],
      [4,5,6]]   using indexing logic
 '''
+windows = [nums[i:i+3] for i in range(len(nums)-2)]
+print(windows)
