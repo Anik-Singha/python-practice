@@ -60,10 +60,23 @@ print((is_logged_in or is_guest) and not is_banned)    # ➜ False (correct logi
 # Python Challenges
 # ---------------------------------------
 # 1. Name is not empty and age is >= 18
+name = "Sam"
+age = 35
+print(bool(name) and age >= 18)
 # 2. Password is at least 8 chars and has no spaces
+password = ' 12345678'
+print(len(password) == 8 and len(password) == len(password.strip()))
 # 3. Email is not empty, contains '@', and ends with '.com'
+email = "anik@gmail.com"
+print(bool(email) and ('@' in email) and ('.com' in email))
 # 4. Username is a string, not None, and longer than 5 characters
+username = "anik"
+print(type(username) == str and username is not None and len(username) > 5)
 # 5. User is admin or moderator, and not banned or email verified
+user = "admin"
+banned = False
+email = True
+print((user == "admin" or user == "moderator") and  (not banned and email))
 
 # ---------------------------------------
 # Membership Operators: in / not in
