@@ -19,3 +19,14 @@ for i in range(1,n+1):
     star = '*'
     print(star*i)
 
+# ! for-else  -- different from if else, here the else will run after the for loop is completed
+# * it is completely useless, for real usage combine with break to check errors
+
+names = ['jone','maria','anik',None,'ram']
+for name in names:
+    if name is None :
+        print("Problem")
+        break
+    print(name)
+else:
+    print("All name available")
