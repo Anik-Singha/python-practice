@@ -81,3 +81,41 @@ print(math.floor(price))   # ➜ 35 (round down)
 print(math.ceil(price))    # ➜ 36 (round up)
 print(math.trunc(price))   # ➜ 35 (truncate decimal part)
 print(int(price))          # ➜ 35 (same as trunc)
+
+# ---------------------------------------
+# Random Numbers
+# ---------------------------------------
+import random
+
+print(random.random())       # ➜ Random float between 0 and 1
+print(random.randint(1, 6))  # ➜ Simulates a die roll (1 to 6)
+
+# random.choice()   ➜ fetches choices of multiple values present inside a collection
+# * doesn't work on set datatype and will only work on dict if the indexing is same as the keys
+print(random.choice('abc'))
+print(random.uniform(1, 6))     # random float between the given numbers
+
+# ---------------------------------------
+# Checking Integer Values
+# ---------------------------------------
+x = 7.0
+print(x.is_integer())  # ➜ True → 7.0 is float but represents an int
+
+y = 7.1
+print(y.is_integer())  # ➜ False → not a whole number
+
+# ---------------------------------------
+# Type Checking
+# ---------------------------------------
+x = 70.4
+print(isinstance(x, int))    # ➜ False
+print(isinstance(x, float))  # ➜ True
+
+# ---------------------------------------
+# Python Challenge
+# ---------------------------------------
+# Generate a random integer between 1 and 100,
+r = random.randint(1,100)
+print(r)
+# then check if the result is an even number.
+print(f'{r} is even is {(r/2).is_integer()}')
