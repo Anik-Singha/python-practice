@@ -41,5 +41,34 @@ print(a)
 # ! HARD
 
 a = [[]] * 3
-a[0].append(1)
 print(a)
+a[0].append(2)
+print(a)    # output : [[1],[1],[1]]
+
+# *  why this is dangerous
+def func(lst=[]):
+    lst.append(1)
+    return lst
+
+print(func())       # out : [1]
+print(func())       # out : [1,1]   Default mutable arguments are created once, not every function call.
+
+# what is the output
+a = [1, 2, 3]
+print(id(a))
+a += [4]
+print(id(a))
+
+#! IMP
+# * 1. Remove duplicates but preserve order
+lst = [1,2,2,3,1,4]
+# BEST
+lst = list(dict.fromkeys(lst))
+print(lst)
+
+# or
+l = []
+for i in lst:
+    if i not in l:
+        l.append(i)
+print(l)
