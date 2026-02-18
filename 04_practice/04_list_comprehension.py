@@ -62,3 +62,4 @@ for x in range(1000000):
 # Method 2
 result = [x for x in range(1000000)]
 '''
+# ? Method 2 is faster , list comprehension uses refined C code inside
